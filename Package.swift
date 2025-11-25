@@ -4,22 +4,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "ThetaClientIOS",
+    name: "THETAClient",
+    platforms: [
+        .iOS("17.0")
+    ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "ThetaClientIOS",
-            targets: ["ThetaClientIOS"]
+            name: "THETAClient",
+            targets: ["THETAClient"]
         ),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "ThetaClientIOS"
-        ),
         .binaryTarget(
             name: "THETAClient",
-            path: "Sources/ThetaClientIOS/THETAClient.xcframework")
+            url: "https://github.com/ricohapi/theta-client/releases/download/1.13.1/THETAClient.xcframework.zip",
+            checksum: "")
     ]
 )
