@@ -18,6 +18,8 @@ let package = Package(
         .target(
             name: "ThetaClientIOS"
         ),
-        .binaryTarget(name: "THETAClient", path: "THETAClient.xcframework")
+        .binaryTarget(
+            name: "THETAClient",
+            path: "Sources/ThetaClientIOS/THETAClient.xcframework")
     ]
 )
